@@ -1,7 +1,7 @@
 # Apuntes_Semana Trece
 Apuntes control de movimiento - Segundo Corte - Novena Semana
 
-# Control de Movimiento (Diseño de Transmisión)
+# Control de Movimiento (Diseño de Transmisión)sdadsasd
 
 **Introducción al Diseño de Transmisión**
 
