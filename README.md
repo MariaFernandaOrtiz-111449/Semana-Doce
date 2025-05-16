@@ -5,41 +5,170 @@ Tomás Santiago Sánchez Barrera & María Fernanda Ortíz Velandia & Andrés Fel
 
 # Control de Movimiento (Diseño de Transmisión)
 
-**Conceptos de Transmisión **
+**Conceptos de Transmisión**
 
-El diseño de transmisión se encarga de transferir potencia y movimiento entre componentes mecánicos, utilizando elementos como engranajes, correas y cadenas. Su objetivo es garantizar eficiencia, durabilidad y seguridad en sistemas como vehículos, maquinaria y robótica. Un diseño adecuado optimiza el rendimiento, reduce el desgaste y mejora la eficiencia energética, combinando principios de cinemática, dinámica y resistencia de materiales.
+El diseño de transmisión mecánica es una disciplina fundamental dentro de la ingeniería, encargada de transferir potencia y movimiento entre distintos componentes de un sistema, utilizando elementos como engranajes, correas, cadenas, piñones, tornillos o bandas. Su objetivo principal es garantizar eficiencia, durabilidad y seguridad en aplicaciones como vehículos, maquinaria industrial, automatización y robótica. Un diseño adecuado no solo optimiza el rendimiento, sino que también reduce el desgaste, minimiza pérdidas de energía y mejora la eficiencia global del sistema. Para lograrlo, combina conocimientos de cinemática, dinámica y resistencia de materiales.
 
-## 1. Requerimientos de diseño
+Uno de los sistemas más utilizados es el sistema polea-correa, que permite transmitir movimiento rotacional entre ejes separados mediante una correa flexible. Es común en ventiladores, alternadores y máquinas agrícolas, gracias a su simplicidad, bajo costo y capacidad de amortiguar vibraciones. Para su diseño se debe considerar el tipo de correa (plana, en V o dentada), la alineación precisa entre poleas y la tensión correcta para evitar deslizamientos o desgastes prematuros.
 
-Para que el diseño en control de movimiento no tenga ningún inconveniente se requiere una excelente selección de un motor y la transmisión del sistema para que el movimiento sea llevado a cabo en la carga o una herramienta. Para este diseño se deben tener en cuenta los siguientes indicadores:
+Por otro lado, el sistema tornillo-guía convierte el movimiento rotacional en desplazamiento lineal, siendo esencial en equipos como tornos, fresadoras, impresoras 3D o prensas. Su ventaja radica en la precisión y la capacidad de soportar grandes cargas axiales. El diseño adecuado implica elegir el paso del tornillo según la resolución deseada, prever la fricción del sistema, y aplicar una buena lubricación para garantizar eficiencia y durabilidad.
 
-* Garantizar que el torque del motor a su máxima velocidad sea suficiente para la aplicación, considerando un margen de seguridad.
+El piñón-cremallera es un mecanismo que transforma movimiento rotacional en lineal mediante el acoplamiento de un engranaje (piñón) con una barra dentada (cremallera). Se emplea en sistemas de dirección de vehículos, puertas automáticas y elevadores, ofreciendo una transmisión directa, robusta y sin deslizamientos. Su diseño requiere materiales resistentes al desgaste, un análisis de las fuerzas radiales y una correcta lubricación entre dientes.
 
-* Verificar que la relación de inercia entre el motor y la carga sea la adecuada para un desempeño óptimo.
+Finalmente, la banda transportadora es un sistema continuo usado para trasladar materiales de un punto a otro en procesos industriales, logísticos o agrícolas. Está compuesta por una banda que se mueve sobre rodillos impulsados por un motor. Sus ventajas incluyen la automatización del transporte, la reducción del esfuerzo humano y la adaptabilidad a diferentes tipos de carga. Un diseño eficaz debe considerar el tipo de banda (PVC, goma, metálica), el peso del material a transportar, la velocidad requerida y la potencia del motor.
 
-* Asegurar que el diseño cumpla con criterios adicionales como costo, precisión y tiempos de ciclo, según los requisitos del sistema.
+En conjunto, estos sistemas de transmisión pueden integrarse en un solo dispositivo o línea de producción, como en el caso de un robot industrial que utiliza bandas para mover piezas, piñón-cremallera para desplazar su brazo, un tornillo-guía para regular la altura de sus herramientas y correas para transmitir la fuerza de sus motores. Cada sistema aporta características únicas que, combinadas correctamente, permiten crear soluciones mecánicas eficientes, confiables y adaptadas a diversas aplicaciones.
 
-Existen diferentes tipos de problemas que nos enfrentamos al momento de diseñar en el cual se especifíca que es lo que se debe solucionar:
+💡 Ejemplo 1: Transmisión Mecánica
 
-* Teniendo el Movimiento de carga deseado	se busca -> dimensionar la Transmisión y motor.
+* Situación:
+Una banda transportadora en una fábrica comienza a moverse más lento de lo normal.
 
-* Teniendo el Motor y transmisión existentes	se busca -> dimensionar el Movimiento de carga resultante.
+* Posible causa:
+La correa de transmisión está floja o desgastada.
 
-* Teniendo el Motor existente, movimiento de carga deseado se busca -> dimensionar la Transmisión.
+* Solución:
+Ajustar la tensión de la correa o reemplazarla. También revisar las poleas y lubricar si es necesario.
 
-* Teniendo el Movimiento de carga deseado, transmisión se busca-> dimensionar el Motor.
+![Gemini_Generated_Image_5jpm8v5jpm8v5jpm](https://github.com/user-attachments/assets/5a124f0e-a2a3-4ba2-b4a7-a3982123e301)
 
-## 2. Inercia y Torque Reflejado
+*Imagen 1. Transmisión Mecánica*
 
-**Inercia Reflejada**: Es la inercia equivalente que el motor "siente" debido a la carga y los elementos de transmisión. Se calcula ajustando la inercia de la carga $J_{L}$ a la referencia del motor mediante la relación de transmisión (N):
+💡 Ejemplo 2: Transmisión eléctrica
 
-$J_{r}:J_{L}*N^{2}$
+* Situación:
+En una zona rural, las bombillas parpadean y se observa baja tensión en los electrodomésticos.
 
-Donde N es la relación que contempla la transmisión
+* Posible causa:
+Caída de voltaje por mala transmisión eléctrica o cableado muy largo sin compensación.
 
-**Torque Reflejado:** Es el torque que el motor debe generar para mover la carga a través de la transmisión. Se obtiene transformando el torque de la carga $T_{L}$ a la referencia del motor:
+* Solución:
+Instalar un transformador reductor en un punto intermedio o usar cables de sección mayor para disminuir la resistencia.
 
-$$T_{r}:\frac{T_{L}}{N}$$
+![image](https://github.com/user-attachments/assets/c246e9e1-53c4-4bd2-910b-7e247fdf552e)
+
+*Imagen 2. Transmisión eléctrica*
+
+## 1. Sistema Polea - Correa
+
+El sistema de transmisión polea-correa es uno de los métodos más utilizados para transferir movimiento y potencia entre ejes separados en sistemas mecánicos. Este mecanismo se basa en el uso de una o más poleas conectadas entre sí mediante una correa flexible que permite transmitir fuerza desde un eje motriz (activo) hacia uno o varios ejes conducidos (pasivos). Su popularidad se debe a su simplicidad de diseño, bajo costo, funcionamiento silencioso y capacidad de absorber vibraciones. Además, permite trabajar con distancias variables entre ejes, lo que lo hace ideal para aplicaciones en maquinaria agrícola, ventiladores, electrodomésticos y sistemas automotrices. La selección adecuada del tipo de correa (plana, trapezoidal o dentada), junto con una correcta tensión y alineación del sistema, es esencial para garantizar una transmisión eficiente, segura y duradera.
+
+![Gemini_Generated_Image_emfzademfzademfz](https://github.com/user-attachments/assets/c2171736-4ba7-4bcd-96df-ef4280f1c3d9)
+
+*Imagen 3. Sistema de Transmisión Polea-Correa*
+
+### 1.1. Relación de Transmisión
+
+La relación de transmisión en un sistema polea-correa indica cuántas veces gira una polea en comparación con otra. Es fundamental para controlar la velocidad y el par (torque) que se transmite entre los ejes. Esta relación se determina por el diámetro o número de dientes (en caso de correas dentadas) de las poleas involucradas.
+
+$V_{Tangencial} = W_{ip}R_{ip} = W_{lp}R_{lp}$
+
+La fórmula básica es:
+
+$$Relación de Transmisión (i) = \frac{D_{conducida}}{D_{motora}}$$
+
+La relación de transmisión también se puede expresar como:
+
+$$\frac{N_{motora}}{N_{conducida}} = \frac{D_{conducida}}{D_{motora}}$$
+
+💡 Ejemplo 3: Aumento de velocidad
+
+* Si la motora mide 150 mm y la conducida 75 mm:
+
+$$i = \frac{75}{150} = 0.5$$
+
+La polea conducida gira 2 veces por cada vuelta de la motora. La velocidad aumenta y el torque disminuye.
+
+![image](https://github.com/user-attachments/assets/e4a0c347-32e7-4774-82d8-aa6abe60def1)
+
+*Imagen 4.Aumento de Velocidad*
+
+💡 Ejemplo 3: Reducción de velocidad
+
+* Si la polea motora tiene 100 mm y la conducida tiene 200 mm:
+
+$$i = \frac{200}{100} = 2$$
+
+La polea conducida gira 1 vez por cada 2 vueltas de la motora. La velocidad disminuye y el torque aumenta.
+
+![image](https://github.com/user-attachments/assets/3a740adf-5174-462b-b687-56e3de8b87ad)
+
+*Imagen 5. Reducción de Velocidad*
+
+### 1.2. Inercia reflejada
+
+La inercia reflejada (o inercia equivalente reflejada al motor) es la resistencia al cambio de movimiento angular que experimenta el motor debido a la inercia de las cargas conectadas a través de un sistema de transmisión. En otras palabras, es la forma en que la inercia de la carga se “ve” desde el lado del motor, ajustada por la relación de transmisión del sistema.
+
+Este concepto es fundamental al diseñar sistemas de control de movimiento (como servomotores o motores paso a paso), porque una inercia reflejada mal calculada puede provocar sobrecarga del motor, respuestas lentas o inestabilidad.
+
+Mediante la siguiente fórmula se halla la inercia reflejada:
+
+$J_{trans ref} = J_{IP} + J_{belt -> in} + J_{LP -> in} + J_{load -> in} + J_{C2 -> in}$
+
+Aplicando la relación de los ejes obtenemos la siguiente fórmula:
+
+$J_{trans ref} = J_{IP} + \frac{W_{belt}}{g\eta}r_{ip}^{2} + \frac{L}{\eta*N_{BP}^{2}}(J_{LP} + J_{load} + J_{C2})$
+
+La correa se modela como una masa rotatoria, cuya inercia es $J = mr^{2}$.
+Sustituyendo $W_{belt} = mg$ y $r = r_{ip}$ nos da como resultado $J_{belt ->in} = \frac{W_{belt}}{g*\eta}r_{ip}^{2}$
+
+![image](https://github.com/user-attachments/assets/9e616b58-0938-4e76-8807-9fa2c65e6e0e)
+
+*Imagen 6. Inercia Reflejada*
+
+💡 Ejemplo 4: Cálculo de Inercia Reflejada en un Sistema Polea-Correa
+
+* Situación:
+
+Un motor está conectado a una polea de diámetro 100 mm, que transmite movimiento mediante una correa a otra polea de diámetro 300 mm, acoplada a una carga rotativa con una inercia de 1.2 kg·m². Queremos calcular la inercia reflejada al eje del motor.
+
+**Paso 1: Calcular la relación de transmisión**
+
+Usamos la fórmula de relación de transmisión basada en los diámetros:
+
+$$i=\frac{D_{conducida}}{D_{motora}} = \frac{300}{100} = 3$$
+
+**Paso 2: Calcular la inercia reflejada**
+
+Aplicamos la fórmula:
+
+$$J_{r} = \frac{J_{c}}{i^{2}} = \frac{1.2}{3^{2}} = 0.133 kgm^{2}$$
+
+Desde el punto de vista del motor, la carga rotativa se siente como si tuviera una inercia de 0.133 kg·m², lo cual es mucho más fácil de mover y controlar que la inercia real de 1.2 kg·m².
+
+### 1.3. Torque de Carga
+
+El torque de carga (también llamado par de carga) es el momento de fuerza que una carga aplica en contra del movimiento generado por un motor o actuador. Es la resistencia que el sistema debe vencer para mantener el movimiento o iniciarlo.
+
+Este torque puede venir de:
+
+* Fricción
+* Gravedad (en sistemas verticales)
+* Inercia (durante aceleración)
+* Cargas externas (como peso de un brazo robótico, fajas transportadoras con carga, etc.)
+
+![image](https://github.com/user-attachments/assets/61dcb8c9-d14c-482a-9c0f-39a12394a7df)
+
+*Imagen 7. Torque de carga*
+
+💡 Ejemplo 5: Torque de carga en una Banda Transportadora
+
+Tenemos una banda transportadora horizontal impulsada por un rodillo de radio 0.1 m, que transporta cajas con un peso total de 80 kg. La banda se mueve a velocidad constante, y se estima una fricción total (banda + rodillos) equivalente a 5% del peso total.
+
+Queremos calcular el torque de carga que el motor debe entregar al eje del rodillo para mover la banda.
+
+**Paso 1: Calcular la fuerza de fricción**
+
+Primero, obtenemos la fuerza de fricción, que es la única oposición en este caso (no hay aceleración ni pendiente):
+
+$$F_{fricción} = 0.05(mg) = 0.05(80*9.81) = 39.24 N$$
+
+**Paso 2: Calcular el torque de carga**
+
+$$T_{C} = Fr = 39.24 * 0.1 = 3.924 N$$
+
+El torque de carga necesario es 3.92 Nm.
+Este es el mínimo torque que el motor debe proporcionar (sin contar pérdidas mecánicas adicionales o inercia de arranque).
 
 ## 3. Conceptos de Transmisión Engranajes
 
