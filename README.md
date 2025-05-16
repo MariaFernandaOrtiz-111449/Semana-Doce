@@ -3,7 +3,7 @@ Apuntes control de movimiento - Tercer Corte - Doceava Semana
 
 Tomás Santiago Sánchez Barrera & María Fernanda Ortíz Velandia & Andrés Felipe Arteaga Escalante
 
-# Control de Movimiento (Diseño de Transmisión)
+# 1. Control de Movimiento (Diseño de Transmisión)
 
 **Conceptos de Transmisión**
 
@@ -49,7 +49,7 @@ Instalar un transformador reductor en un punto intermedio o usar cables de secci
 
 *Imagen 2. Transmisión eléctrica*
 
-## 1. Sistema Polea - Correa
+## 2. Sistema Polea - Correa
 
 El sistema de transmisión polea-correa es uno de los métodos más utilizados para transferir movimiento y potencia entre ejes separados en sistemas mecánicos. Este mecanismo se basa en el uso de una o más poleas conectadas entre sí mediante una correa flexible que permite transmitir fuerza desde un eje motriz (activo) hacia uno o varios ejes conducidos (pasivos). Su popularidad se debe a su simplicidad de diseño, bajo costo, funcionamiento silencioso y capacidad de absorber vibraciones. Además, permite trabajar con distancias variables entre ejes, lo que lo hace ideal para aplicaciones en maquinaria agrícola, ventiladores, electrodomésticos y sistemas automotrices. La selección adecuada del tipo de correa (plana, trapezoidal o dentada), junto con una correcta tensión y alineación del sistema, es esencial para garantizar una transmisión eficiente, segura y duradera.
 
@@ -57,7 +57,7 @@ El sistema de transmisión polea-correa es uno de los métodos más utilizados p
 
 *Imagen 3. Sistema de Transmisión Polea-Correa*
 
-### 1.1. Relación de Transmisión
+### 2.1. Relación de Transmisión
 
 La relación de transmisión en un sistema polea-correa indica cuántas veces gira una polea en comparación con otra. Es fundamental para controlar la velocidad y el par (torque) que se transmite entre los ejes. Esta relación se determina por el diámetro o número de dientes (en caso de correas dentadas) de las poleas involucradas.
 
@@ -95,7 +95,7 @@ La polea conducida gira 1 vez por cada 2 vueltas de la motora. La velocidad dism
 
 *Imagen 5. Reducción de Velocidad*
 
-### 1.2. Inercia reflejada
+### 2.2. Inercia reflejada
 
 La inercia reflejada (o inercia equivalente reflejada al motor) es la resistencia al cambio de movimiento angular que experimenta el motor debido a la inercia de las cargas conectadas a través de un sistema de transmisión. En otras palabras, es la forma en que la inercia de la carga se “ve” desde el lado del motor, ajustada por la relación de transmisión del sistema.
 
@@ -136,7 +136,7 @@ $$J_{r} = \frac{J_{c}}{i^{2}} = \frac{1.2}{3^{2}} = 0.133 kgm^{2}$$
 
 Desde el punto de vista del motor, la carga rotativa se siente como si tuviera una inercia de 0.133 kg·m², lo cual es mucho más fácil de mover y controlar que la inercia real de 1.2 kg·m².
 
-### 1.3. Torque de Carga
+### 2.3. Torque de Carga
 
 El torque de carga (también llamado par de carga) es el momento de fuerza que una carga aplica en contra del movimiento generado por un motor o actuador. Es la resistencia que el sistema debe vencer para mantener el movimiento o iniciarlo.
 
@@ -170,7 +170,7 @@ $$T_{C} = Fr = 39.24 * 0.1 = 3.924 N$$
 El torque de carga necesario es 3.92 Nm.
 Este es el mínimo torque que el motor debe proporcionar (sin contar pérdidas mecánicas adicionales o inercia de arranque).
 
-## 2. Tornillo guía
+## 3. Tornillo guía
 
 El tornillo guía, también conocido como husillo de avance o husillo de bolas (cuando tiene rodamientos internos), es un mecanismo utilizado para convertir el movimiento rotacional en movimiento lineal, con alta precisión y control.
 
