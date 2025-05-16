@@ -170,121 +170,64 @@ $$T_{C} = Fr = 39.24 * 0.1 = 3.924 N$$
 El torque de carga necesario es 3.92 Nm.
 Este es el mínimo torque que el motor debe proporcionar (sin contar pérdidas mecánicas adicionales o inercia de arranque).
 
-## 3. Conceptos de Transmisión Engranajes
+## 2. Tornillo guía
 
-La relación de engranajes determina cómo se transmite el movimiento y el torque entre engranajes de distintos tamaños en un sistema mecánico. Se define como la razón entre el número de dientes o los diámetros de los engranajes involucrados:
+El tornillo guía, también conocido como husillo de avance o husillo de bolas (cuando tiene rodamientos internos), es un mecanismo utilizado para convertir el movimiento rotacional en movimiento lineal, con alta precisión y control.
 
-$$N = \frac{Z_{conducido}}{Z_{conductor}} = \frac{D_{conducido}}{D_{conductor}}$$
+Es muy común en sistemas como:
 
-Donde:
+* Máquinas CNC
+* Impresoras 3D
+* Robots cartesianos
+* Actuadores lineales
 
-* 𝑍 es el número de dientes.
+Este sistema está compuesto por un tornillo roscado y una tuerca móvil. Cuando el tornillo gira, la tuerca se desplaza linealmente a lo largo de él (o viceversa, dependiendo del montaje).
 
-* 𝐷 es el diámetro del engranaje.
+![image](https://github.com/user-attachments/assets/b5ab5811-ce14-497b-8364-444f270c2cc6)
 
-* N es la relación de transmisión.
+*Imagen 8. Tornillo guía*
 
-**Efectos de la Relación de Engranajes**
+💡 Ejemplo 6:
 
-*Reducción de velocidad (𝑁 > 1)*
+Una impresora 3D tipo cartesiana utiliza un tornillo guía en el eje Z (el eje vertical que sube y baja el extrusor o la cama). Durante la impresión, se nota que la boquilla no sube uniformemente al cambiar de capa, lo que provoca que algunas capas se aplasten y otras queden desalineadas.
 
-* El engranaje conducido es más grande que el conductor.
+**Posible causa**
 
-* La velocidad angular disminuye, pero el torque aumenta.
+* Acumulación de polvo o residuos plásticos en el tornillo guía que generan fricción.
+* Falta de lubricación, lo que impide un movimiento suave.
+* Tuerca floja o desgastada, lo que causa holgura y movimientos imprecisos.
+* Tornillo guía doblado o mal alineado con los soportes.
 
-*Aumento de velocidad (𝑁 < 1)*
+**Solución**
 
-* El engranaje conducido es más pequeño.
+* Limpieza completa del tornillo con un paño seco o cepillo suave.
+* Aplicar lubricante específico (por ejemplo, grasa ligera o aceite para husillos).
+* Verificar el ajuste de la tuerca, reapretar si es necesario o reemplazar si tiene juego.
+* Revisar que el tornillo no esté doblado o desalineado; si lo está, se debe reemplazar y realinear el montaje.
 
-* La velocidad angular aumenta, pero el torque disminuye.
+### 3.1. Tornillo guía ACME
 
-*Relación 1:1 (N=1)*
+El tornillo guía ACME es un tipo de tornillo de potencia diseñado para convertir movimiento rotativo en movimiento lineal, utilizado comúnmente en maquinaria, tornos, prensas, impresoras 3D y sistemas de elevación.
 
-* Ambos engranajes tienen el mismo tamaño.
+Se caracteriza por tener una rosca trapezoidal, con un ángulo de 29° en sus flancos, lo cual lo hace más robusto y resistente al desgaste que una rosca común (como la métrica o la de tornillos de fijación).
 
-* No hay cambio en la velocidad ni en el torque.
+![image](https://github.com/user-attachments/assets/3f6c96b3-d70f-4e12-8b0d-8c9944486b47)
 
-### 3.1. Eficiencia
+*Imagen 9. Tornillo Guía Acme*
 
-La eficiencia en el control de movimiento se refiere a la capacidad de un sistema para transformar la energía en movimiento preciso y efectivo, minimizando pérdidas y optimizando el desempeño.
+### 3.2. Tornillo guía de esfera
 
-**Factores Clave en la Eficiencia**
+El tornillo guía de esferas es un mecanismo de transmisión lineal de alta precisión que convierte el movimiento rotativo en lineal, al igual que el tornillo ACME, pero con una eficiencia mucho mayor gracias al uso de bolas recirculantes entre el tornillo y la tuerca.
 
-*Transmisión de Energía*
+Estas esferas giran en canales especialmente diseñados, lo que reduce drásticamente la fricción y permite movimientos más suaves, rápidos y precisos.
 
-* Usar mecanismos de transmisión eficientes, como engranajes de alta precisión o correas síncronas con baja fricción.
+![image](https://github.com/user-attachments/assets/99069899-78f6-42bd-9f43-c06bd3055616)
 
-* Minimizar pérdidas por rozamiento y holguras en acoplamientos mecánicos.
+*Imagen 10. Tornillo guía de esferas*
+ 
+### 3.3. Relación de Transmisión
 
-*Control del Torque y la Velocidad*
 
-* Implementar controladores PID o algoritmos avanzados para ajustar dinámicamente el torque y la velocidad.
-
-* Asegurar una relación de inercia adecuada entre el motor y la carga para mejorar la respuesta del sistema.
-
-*Reducción de Pérdidas Energéticas*
-
-* Seleccionar motores y accionamientos con alta eficiencia.
-
-* Evitar sobrecargas y diseñar el sistema para operar dentro del rango óptimo de eficiencia del motor.
-
-*Optimización del Perfil de Movimiento*
-
-* Usar aceleraciones y desaceleraciones suaves para evitar picos de corriente y desgaste mecánico.
-
-* Aplicar técnicas como interpolación y control de trayectoria para mejorar la precisión y reducir vibraciones.
-
-*Selección de Sensores y Realimentación*
-
-* Implementar sensores de alta resolución para mejorar la precisión y estabilidad del control.
-
-* Utilizar sistemas de retroalimentación en tiempo real para corregir desviaciones y mejorar la eficiencia del sistema.
-  
-### 3.2. Inercia Total
-
-Es la suma de todas las inercias reflejadas al eje del motor. Incluye la inercia del propio motor, la inercia de la carga y la de los elementos de transmisión, ajustadas según la relación de transmisión. Se expresa mediante la fórmula general:
-
-$$J{total} = J{motor} + J{transmisión} + J{carga} {reflejada}$$
-
-Donde:
-
-* $J{motor}$: Es la inercia del rotor del motor.
-
-* $J{transmision}$: Es la inercia de engranajes, poleas, correas, etc.
-
-*$J{carga reflejada}$: ​Es la inercia de la carga ajustada a la referencia del motor, calculada como:
-
-$$J{carga}{reflejada} : J{carga} * N^{2}$$
-
-Donde N está dado por la relación de transmisión.
-
-$N: \frac{W_{motor}}{W_{carga}}$
-
-**Importancia del Cálculo de la Inercia Total**
-* *Afecta la respuesta dinámica: Una inercia elevada requiere mayor torque para acelerar y desacelerar.*
-* *Influye en la selección del motor: Un desbalance entre la inercia del motor y la carga puede afectar la estabilidad y eficiencia del sistema.*
-* *Optimiza el control de movimiento: Una inercia total bien calculada permite un control más preciso y eficiente del sistema.*
-  
-### 3.3. Relación de Inercia
-
-Es un parámetro clave en el diseño de sistemas de control de movimiento, ya que indica el equilibrio dinámico entre el motor y la carga. Se define como la razón entre la inercia reflejada de la carga y la inercia del rotor del motor
-
-Relación de Inercia: $$\frac{J{carga} {reflejada}}{J_{motor}}$$
-
-**Donde:**
-* $J{carga} {reflejada}: J_{carga} * N^{2}$ (si hay una transmisión con relación N)
-* $J_{motor}$ es la inercia del motor
-
-**Práctica de la relación de Inercia**
-
-En la práctica, la relación de inercia entre la carga y el motor es un aspecto clave para lograr un sistema de movimiento eficiente y confiable. Esta relación influye directamente en el comportamiento dinámico del sistema, así como en la selección del motor y la transmisión. Dependiendo del tipo de aplicación y sus exigencias, se pueden presentar distintos escenarios que vale la pena considerar:
-
-* *Relación de inercia baja (rango de 1 a 2)*: Es adecuada para aplicaciones que requieren movimientos rápidos, con frecuentes arranques y paradas. No obstante, puede implicar el uso de un motor sobredimensionado, lo cual aumenta los costos y reduce la eficiencia energética.
-
-* *Relación de inercia alta (mayor a 10):* Se emplea en situaciones donde no se necesita una alta dinámica, como en movimientos lentos o constantes. Aunque puede reducir el tamaño del motor, también conlleva riesgos como una baja eficiencia del sistema o torque insuficiente para cumplir con la tarea.
-
-Por ello, elegir correctamente la relación de inercia según la aplicación es esencial para optimizar el rendimiento y evitar problemas en el diseño de sistemas de control de movimiento.
-Un sensores un dispositivo que detecta cambios en una magnitud física o química, como temperatura, presión o luz, y los convierte en señales eléctricas para su procesamiento. Se usa en diversos sistemas para monitoreo y automatización.
 
 
 ## 4. Concepto Transmisión Polea-Correa
