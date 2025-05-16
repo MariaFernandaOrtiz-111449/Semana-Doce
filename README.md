@@ -1,9 +1,11 @@
 # Apuntes_Semana Doce
 Apuntes control de movimiento - Tercer Corte - Doceava Semana
 
+Tomás Santiago Sánchez Barrera & María Fernanda Ortíz Velandia & Andrés Felipe Arteaga Escalante
+
 # Control de Movimiento (Diseño de Transmisión)
 
-**Introducción al Diseño de Transmisión**
+**Conceptos de Transmisión **
 
 El diseño de transmisión se encarga de transferir potencia y movimiento entre componentes mecánicos, utilizando elementos como engranajes, correas y cadenas. Su objetivo es garantizar eficiencia, durabilidad y seguridad en sistemas como vehículos, maquinaria y robótica. Un diseño adecuado optimiza el rendimiento, reduce el desgaste y mejora la eficiencia energética, combinando principios de cinemática, dinámica y resistencia de materiales.
 
