@@ -451,20 +451,71 @@ $T_{load-> in} = \frac{F_{ext}}{\eta N_{RP}}$
 
 💡 Ejemplo 11:
 
-## 6. Conclusiones
+Supón que tienes:
 
-* El diseño correcto de sistemas de transmisión mecánica (engranajes, correas, cadenas) es esencial para garantizar eficiencia, precisión, seguridad y durabilidad en sistemas automatizados y mecatrónicos.
-* Una correcta elección del motor y su relación con la transmisión y la carga permite alcanzar un funcionamiento óptimo. Esto requiere asegurar el torque necesario, una relación de inercia adecuada y el cumplimiento de criterios como el costo, precisión y tiempos de ciclo.
-* La inercia y el torque reflejados al eje del motor deben calcularse para anticipar el esfuerzo que el motor debe realizar. Esto es vital para evitar sobrecargas, mejorar el rendimiento dinámico y permitir un control más preciso.
-* La relación entre engranajes afecta directamente la velocidad y el torque transmitido. Además, mantener alta eficiencia en el sistema minimiza pérdidas energéticas, mejora la vida útil del equipo y reduce el consumo energético.
-* La relación define el equilibrio entre la inercia de la carga y la del motor. Mantenerla en rangos adecuados asegura un control estable y eficiente. Una mala relación puede llevar a inestabilidad, sobreesfuerzo del motor o pérdida de precisión.
+* Una fuerza de carga $𝐹 = 100 N$ que se requiere para mover la cremallera.
+* Un piñón con diámetro primitivo $D=60mm=0.06m$
+
+Entonces:
+
+$T = 100 ⋅ \frac{0.06}{2} = 100 ⋅ 0.03 = 3 Nm$
+
+El motor debe generar al menos 3 Nm de torque para vencer la fuerza de carga sobre la cremallera con ese piñón. Si además hay fricción, inercia, o pendientes, ese torque deberá aumentarse.
+
+## 5. Banda Transportadora plana
+
+Una banda transportadora plana es un sistema mecánico utilizado para transportar materiales o productos de un punto a otro de manera continua y eficiente. Está compuesta principalmente por una banda flexible (generalmente de goma, PVC o poliuretano) que se desplaza sobre una estructura plana sostenida por rodillos o una cama deslizante. La banda es impulsada por poleas motrices, y guiada por poleas conducidas y rodillos de retorno.
+
+Este tipo de transportador se emplea ampliamente en industrias como la alimentaria, farmacéutica, manufactura, logística y empaque, ya que permite un flujo constante de productos, optimizando tiempos de producción y reduciendo el esfuerzo humano.
+
+La simplicidad de diseño, facilidad de mantenimiento y adaptabilidad a diferentes longitudes, velocidades y cargas, hacen de la banda plana una solución ideal para el manejo de materiales en procesos automatizados.
+
+**Fórmula General:**
+
+$N= \frac{Velocidad motor}{Velocidad carga}$
+
+$V_{belt} = r_{ip}w_{ip}$
+
+$N_{BD} = \frac{1}{r_{ip}}$
+
+![image](https://github.com/user-attachments/assets/88e7a920-9946-45a6-9efe-feec89a382c4)
+
+*Imagen 17. Banda Transportadora plana*
+
+Ejemplo 12:
+
+Datos del sistema:
+
+* Longitud de la banda: $L=5m$
+* Velocidad lineal deseada: $v=0.5m/s$
+* Diámetro de la polea motriz: $D=0.2m$
+* Masa total transportada sobre la banda: $m=50kg$
+* Coeficiente de fricción (rodadura + fricción interna): $\mu=0.04$
+* Gravedad: $g=9.81m/s^{2}$
+
+1. Cálculo de la velocidad angular de la polea motriz
+
+$w = \frac{v}{r} = \frac{0.5}{0.1} = 5 rad/s$
+
+Donde $r = \frac{D}{2} = 0.1m$
+
+2. Cálculo del torque necesario en la polea motriz
+
+Primero se calcula la fuerza de fricción que la banda debe vencer:
+
+$f = \mu⋅m⋅g = 0.04⋅50⋅9.81 = 19.62 N$
+
+Luego, el torque requerido en la polea:
+
+$T = f*r = 19.62⋅0.1 = 1.962 Nm$
+
+Para mover una banda transportadora plana de 5 metros con una carga de 50 kg a una velocidad de 0.5 m/s, utilizando una polea de 20 cm de diámetro, se necesita:
+
+* Una velocidad angular de 5 rad/s
+* Un torque mínimo de 1.96 Nm en el eje de la polea motriz
+
+
 
 ## 7. Referencias
 
-* Mecatrónica Integrada (2023). Motores eléctricos: Torque, potencia y eficiencia. Universidad Cooperativa de Colombia – Facultad de Ingeniería Mecatrónica. Material de estudio.
-
-* González, J. (2019). Principios de máquinas eléctricas y transformadores. McGraw-Hill.
-
-* Universidad Nacional de Colombia (2022). Laboratorio de máquinas eléctricas: prácticas con motores de inducción y corriente continua. Facultad de Ingeniería Eléctrica.
-
-* Universidad Cooperativa de Colombia – Facultad de Ingeniería Mecatrónica. (2023). Motores eléctricos: Torque, potencia y eficiencia. Material de estudio interno.
+*
