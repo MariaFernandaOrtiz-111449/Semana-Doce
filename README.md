@@ -83,7 +83,7 @@ La polea conducida gira 2 veces por cada vuelta de la motora. La velocidad aumen
 
 *Imagen 4.Aumento de Velocidad*
 
-💡 Ejemplo 3: Reducción de velocidad
+💡 Ejemplo 4: Reducción de velocidad
 
 * Si la polea motora tiene 100 mm y la conducida tiene 200 mm:
 
@@ -116,7 +116,7 @@ Sustituyendo $W_{belt} = mg$ y $r = r_{ip}$ nos da como resultado $J_{belt ->in}
 
 *Imagen 6. Inercia Reflejada*
 
-💡 Ejemplo 4: Cálculo de Inercia Reflejada en un Sistema Polea-Correa
+💡 Ejemplo 5: Cálculo de Inercia Reflejada en un Sistema Polea-Correa
 
 * Situación:
 
@@ -151,7 +151,7 @@ Este torque puede venir de:
 
 *Imagen 7. Torque de carga*
 
-💡 Ejemplo 5: Torque de carga en una Banda Transportadora
+💡 Ejemplo 6: Torque de carga en una Banda Transportadora
 
 Tenemos una banda transportadora horizontal impulsada por un rodillo de radio 0.1 m, que transporta cajas con un peso total de 80 kg. La banda se mueve a velocidad constante, y se estima una fricción total (banda + rodillos) equivalente a 5% del peso total.
 
@@ -187,7 +187,7 @@ Este sistema está compuesto por un tornillo roscado y una tuerca móvil. Cuando
 
 *Imagen 8. Tornillo guía*
 
-💡 Ejemplo 6:
+💡 Ejemplo 7:
 
 Una impresora 3D tipo cartesiana utiliza un tornillo guía en el eje Z (el eje vertical que sube y baja el extrusor o la cama). Durante la impresión, se nota que la boquilla no sube uniformemente al cambiar de capa, lo que provoca que algunas capas se aplasten y otras queden desalineadas.
 
@@ -227,110 +227,229 @@ Estas esferas giran en canales especialmente diseñados, lo que reduce drástica
  
 ### 3.3. Relación de Transmisión
 
+La relación de transmisión en un tornillo guía es un concepto fundamental que describe cómo se convierte el movimiento rotacional en movimiento lineal. Esta relación indica cuánta distancia recorre linealmente una tuerca por cada vuelta completa del tornillo.
+
+Este desplazamiento lineal depende directamente del paso del tornillo, que se define como la distancia que avanza la tuerca por cada revolución del tornillo. Por lo tanto, la relación de transmisión puede expresarse como:
+
+$$Relación de transmisión = \frac{1}{paso del tornillo (mm/rev)}$$
+
+![image](https://github.com/user-attachments/assets/c3c21725-a722-4cc2-b88e-2a61f37e78c3)
+
+*Imagen 11. Relación de Transmisión Tornillo Guía*
+
+💡 Ejemplo 8: 
+Supón que tienes un tornillo con un paso de 5 mm. Eso quiere decir que por cada vuelta completa, la tuerca se mueve 5 mm en línea recta.
+
+Entonces:
+
+$$RT = \frac{1rev}{5mm} = 0.2 rev/mm$$
 
 
+En los sistemas de transmisión mecánica mediante tornillos guía, es importante comprender dos conceptos clave: el cabeceo (pitch) y el paso (lead). Ambos están relacionados con la conversión del movimiento rotacional en movimiento lineal, pero representan medidas distintas.
 
-## 4. Concepto Transmisión Polea-Correa
+🔹 Cabeceo (Pitch):
+El cabeceo indica el número de vueltas que debe realizar el tornillo para que la cápsula o tuerca se desplace una distancia lineal de 1 metro (o 1 pulgada en el sistema inglés). Es una forma de expresar la relación inversa entre la rotación del tornillo y el avance lineal, y se utiliza frecuentemente para calcular relaciones de transmisión.
 
-El sistema de transmisión por polea y correa es un mecanismo ampliamente utilizado para transferir movimiento y potencia entre dos ejes separados. Este tipo de transmisión se basa en el uso de una correa flexible que conecta dos poleas: una motriz (conectada al motor) y otra conducida (conectada a la carga). Al girar la polea motriz, la correa transmite ese movimiento a la polea conducida, permitiendo modificar la velocidad y el torque de salida según el diámetro de las poleas involucradas.
+Por ejemplo, si el cabeceo es de 5 rev/m, significa que el tornillo debe girar 5 veces para que la tuerca avance 1 metro.
 
-Entre sus ventajas destacan la simplicidad mecánica, el bajo costo, el funcionamiento silencioso y la capacidad de absorber vibraciones. Además, permite transmisiones a distancia y cierta flexibilidad en la alineación de los ejes. Sin embargo, también presenta desventajas como el posible deslizamiento de la correa, la necesidad de mantenimiento periódico (ajuste de tensión y reemplazo de la correa) y una eficiencia menor comparada con sistemas más rígidos como engranajes.
+🔹 Paso (Lead):
+El paso representa la distancia que recorre la cápsula por cada vuelta completa del tornillo, expresado en metros o pulgadas. Es decir, cuántos milímetros (o pulgadas) se mueve la tuerca por una revolución del tornillo.
 
-**Puntos claves:**
+Por ejemplo, si el paso es de 5 mm, entonces por cada vuelta del tornillo, la tuerca se desplazará 5 mm en línea recta.
 
-* *Relación de transmisión:* Se determina por el cociente entre los diámetros de las poleas. Esto permite adaptar la velocidad y el torque entre el motor y la carga.
+A partir del entendimiento técnico surgen las formulas matemáticas como las siguientes: 
 
-* *Tensión adecuada:* Es fundamental mantener la correa con la tensión correcta para evitar deslizamientos y asegurar una transmisión eficiente y duradera.
+$\bigtriangleup \theta = 2\pi p \bigtriangleup X$
+
+$\frac{\bigtriangleup \theta }{\bigtriangleup X} = 2\pi p$
+
+$\frac{\frac{\bigtriangleup \theta }{\bigtriangleup t}}{\frac{\bigtriangleup X}{\bigtriangleup t}} = \frac{velocidad motor}{velocidad carga} = \frac{\theta ^{\cdot }}{x^{\cdot }} = 2\pi P$
+
+![image](https://github.com/user-attachments/assets/c53f3ee1-89f0-456b-9d4c-f454b5685fbb)
+
+*Imagen 12. Relación de Transmisión*
+
+### 3.4. Inercia Reflejada
+
+Es la inercia del sistema lineal (como una carga movida por un tornillo) que se “refleja” o se transfiere al eje rotacional del motor a través del tornillo guía. Esta conversión depende directamente de la relación de transmisión del tornillo, es decir, del paso o lead del tornillo.
+
+![image](https://github.com/user-attachments/assets/1779bffb-c972-4499-9de1-3882b2c6fd5a)
+
+*Imagen 13. Inercia Reflejada Tornillo Guía*
+
+Sabiendo que la carga tiene un movimiento lineal, su energía cinética
+sería:
+
+$KE = \frac{1}{2} m{X^{\cdot }}^{2}$
+
+A partir de la relación de transmisión $\frac{\theta ^{\cdot }}{X^{\cdot }} = 2\pi P$ se puede reemplazar
+
+$KE = \frac{1}{2} m \frac{1}{(2\pi P)^{2}} {\theta ^{\cdot }}^{2}$
+
+Ahora se tiene la energía cinética en términos de la velocidad angular,
+por lo tanto el término que multiplica la velocidad es la inercia reflejada
+
+$J_{ref} = m \frac{1}{(2\pi P)^{2}}$
+
+$J_{ref} = \frac{m}{{N_{s}}^{2}}$
+
+### 3.5. Inercia Reflejada Total 
+
+En sistemas mecatrónicos donde un motor acciona una carga a través de elementos de transmisión (como tornillos guía, engranajes o correas), es fundamental analizar la inercia reflejada total. Esta representa la suma de todas las inercias que el motor “siente” en su eje, es decir, la resistencia que encuentra para acelerar o desacelerar el sistema completo.
+
+A continuación se realizará un análisis matemático frente a las cargas sufridas por el sistema y la respuesta de la inercia del mismo.
+
+$m = \frac{W_{L} + W_{c}}{g}$
+
+$J_{trans ref} = J_{screw} + J_{load -> in} + J_{carriage -> in}$
+
+$J_{trans ref} = J_{screw} + \frac{1}{\eta {N_{s}}^{2}} (\frac{W_{L} + W_{c}}{g})$
+
+### 3.6. Torque de Carga
+
+El torque de carga (también conocido como torque resistivo) es el esfuerzo rotacional que el motor debe vencer para mover una carga en un sistema mecánico. Este torque representa todas las fuerzas que se oponen al movimiento del eje del motor debido a la presencia de masas, fricción, gravedad u otras resistencias externas.
+
+![image](https://github.com/user-attachments/assets/afc17e42-2b51-4ecd-96b3-502eb033f06e)
+
+*Imagen 14. Torque de carga*
+
+A continuación se realizará un análisis matemático frente a las cargas sufridas por el sistema y la respuesta de la inercia del mismo.
+
+$F_{ext} = F_{f} + F_{g} + F_{p}$
+
+$F_{f} = \mu (W_{L} + W_{c}) cos\beta$
+
+$F_{g} = (W_{L} + W_{c}) sin\beta$
+
+$F_{ext} = F_{p} + (W_{L} + W_{c})(sin\beta + \mu cos\beta)$
+
+Si está horizontal la fuerza gravitacional es 0
+
+Para calcular el torque de la carga reflejado en el motor, se puede considerar el trabajo realizado por este:
+
+$Work = F_{ext} \frac{1}{(2\pi P)} \bigtriangleup \theta$
+
+$Work = F_{ext} \bigtriangleup X$
+
+$Work = T_{load-> in} \bigtriangleup \theta$
+
+$T_{load-> in} = \frac{F_{ext}}{N_{s}}$
+
+$T_{load-> in} = \frac{F_{ext}}{\eta N_{s}}$
+
+## 4. Piñon cremallera
+
+El sistema piñón-cremallera es un mecanismo de transmisión de movimiento que convierte el movimiento rotatorio de un engranaje (piñón) en movimiento lineal a través de una barra dentada recta (cremallera). Este sistema es ampliamente utilizado en aplicaciones donde se requiere un desplazamiento lineal preciso y robusto, como en sistemas de dirección de vehículos, máquinas CNC, elevadores industriales y equipos automatizados.
+
+Gracias a su diseño simple y directo, el piñón-cremallera ofrece una transmisión mecánica eficiente, con alta rigidez y sin deslizamientos, lo que lo convierte en una alternativa ideal frente a otros mecanismos lineales como husillos o actuadores eléctricos cuando se requiere velocidad y fuerza constantes.
+
+Este tipo de transmisión permite una relación directa entre el giro del piñón y el desplazamiento de la cremallera, lo cual facilita el cálculo del movimiento y del esfuerzo necesario para accionar el sistema. Su mantenimiento relativamente sencillo y su capacidad para operar bajo condiciones exigentes hacen del piñón-cremallera una solución confiable en muchos sistemas industriales y de automatización.
+
+![image](https://github.com/user-attachments/assets/6f4632ef-4ac8-426b-8470-c8fbba7c9cb3)
+
+*Imagen 15. Piñon Cremallera*
+
+💡 Ejemplo 9:
+Tenemos un sistema piñón-cremallera utilizado en una máquina para desplazar un cabezal de corte. El piñón tiene un diámetro de paso de 100 mm y está acoplado a un motor que gira a 60 rpm.
+
+Queremos calcular:
+
+* ¿Cuánto se desplaza la cremallera en 1 minuto?
+
+ Cada vuelta del piñón hace avanzar la cremallera una distancia igual al perímetro del piñón.
+
+Si gira 60 veces por minuto:
+
+$Desplazamiento total=60⋅314.16 mm=18849.56 mm=18.85 m$
+
+* ¿Cuál es la velocidad lineal de la cremallera en mm/s?
+
+$V = \frac{desplazamiento total}{tiempo} = \frac{18849.56 mm}{60 s} ≈314.16 mm/s$
 
 ### 4.1. Relación de Transmisión
 
-La relación de transmisión en un sistema de polea-correa indica cómo se modifica la velocidad de rotación entre la polea motriz (la que transmite el movimiento) y la polea conducida (la que recibe el movimiento). Esta relación depende directamente del tamaño de las poleas, y se calcula como:
+El sistema piñón-cremallera es un mecanismo ampliamente utilizado para convertir el movimiento rotacional de un engranaje (piñón) en un movimiento lineal de una barra dentada (cremallera). A diferencia de los sistemas de transmisión entre dos engranajes circulares, donde la relación de transmisión se expresa como una razón entre radios o número de dientes, en el sistema piñón-cremallera la relación se establece entre el ángulo de rotación del piñón y la distancia lineal recorrida por la cremallera.
 
-Relación de transmisión (i) = $$\frac {Diámetro de la polea conducida}{Diámetro de la polea motriz}$$
+Esta relación depende directamente del diámetro primitivo del piñón (o su paso circular), y se expresa típicamente como:
 
-Este valor también puede expresarse usando las velocidades de rotación:
+$$x=r⋅\theta$$
 
-$$i: \frac{Velocidad de la polea motriz}{Velocidad de la polea conducida}$$
+Donde:
+
+* x: desplazamiento lineal de la cremallera
+* r: radio del piñón (o $\frac{D}{2}$)
+* θ: ángulo de rotación en radianes
+
+La relación de transmisión indica cuánta distancia se desplazará la cremallera por cada vuelta del piñón, lo cual es clave para calcular velocidades lineales, aceleraciones, y seleccionar motores en sistemas de automatización, dirección de vehículos, maquinaria CNC, entre otros.
+
+![image](https://github.com/user-attachments/assets/2884429e-ceaf-40e9-bf32-111559600d2f)
+
+*Imagen 16. Transmisión piñon cremallera*
+
+A partir de la definicón teórica, aplicamos otra deficinión matemática:
+
+$N = \frac{Velocidad motor}{Velocidad carga}$
+
+$V_{rack} = r_{pinion}w_{pinion}$
+
+$N_{RP} = \frac{1}{r_{pinion}}$
+
+💡 Ejemplo 10:
+Supongamos que tenemos un piñón con un diámetro primitivo de 80 mm, acoplado a un motor que realiza una rotación completa. Queremos saber:
+
+* ¿Qué distancia lineal recorre la cremallera por cada vuelta del piñón?
+
+Sabemos que el desplazamiento lineal por cada vuelta del piñón es igual a su perímetro primitivo:
+
+$Desplazamiento=\pi⋅D=\pi⋅80 mm≈251.33 mm$
+
+Entonces, por cada vuelta del piñón, la cremallera se moverá 251.33 mm.
+
+* Calcular el desplazamiento total para 10 vueltas
+
+$Desplazamiento total=10⋅251.33 mm=2513.3 mm=2.513 m$
 
 ### 4.2. Inercia Reflejada
 
-En un sistema de polea-correa, la inercia reflejada se refiere a cómo la inercia de la carga (conectada a la polea conducida) se “ve” desde el motor (polea motriz), tomando en cuenta la relación de transmisión. Este concepto es clave en el diseño de sistemas de control de movimiento, ya que afecta directamente la respuesta dinámica del motor.
+En sistemas mecánicos como el piñón-cremallera, la inercia reflejada es el efecto que la masa lineal en movimiento (por ejemplo, una carga desplazándose sobre la cremallera) tiene desde el punto de vista del eje del motor que hace girar el piñón.
 
-La inercia reflejada $J_{ref}$ al eje del motor se obtiene mediante la siguiente fórmula:
+Aunque la carga se mueve linealmente, su masa equivale a una cierta inercia rotacional reflejada al motor, debido a la relación entre desplazamiento angular del piñón y desplazamiento lineal de la cremallera.
 
-$$J_{ref}: \frac{J_{carga}}{i^{2}}$$
+Fórmula general:
+
+$J_{ref} = m*r^{2}$
+
+* $J_{ref}$= inercia reflejada al eje del motor (kg·m²)
+* m = masa de la carga lineal (kg)
+* r = radio primitivo del piñón (m)
+
+A partir de la definicón teórica, aplicamos otra deficinión matemática:
+
+$J_{trans ref} = J_{pinion} + J_{load->in} + J_{carriage-> in}$
+
+$J_{trans ref} = J_{pinion} + \frac{1}{\eta {N_{RP}}^{2}}(\frac{W_{L} + W_{c}}{g})$
+
+### 4.3. Torque de carga
+
+En un sistema piñón-cremallera, el torque de carga es el momento que el motor debe ejercer sobre el piñón para vencer una fuerza lineal (por ejemplo, una carga que se quiere mover) a través del contacto con la cremallera.
+
+Fórmula del torque de carga:
+
+$T=F⋅r$
 
 Donde:
-* $J_{carga}$ es la inercia real de la carga.
-* 𝑖
-i es la relación de transmisión (diámetro polea conducida / diámetro polea motriz).
 
-### 4.3. Torque de Carga
+* T = torque de carga (Nm)
+* F = fuerza lineal que se aplica sobre la cremallera (N)
+* r = radio primitivo del piñón (m)
 
-El torque de carga en un sistema de transmisión por polea-correa es el torque que debe entregar el motor para mover la carga conectada a la polea conducida. Este torque depende de la relación de transmisión, el tipo de carga y la eficiencia del sistema.
+A partir de la definicón teórica, aplicamos otra deficinión matemática:
 
-**Relación entre torque del motor y torque de la carga:**
+$F_{ext} = F_{f} + F_{g} + F_{p}$
 
-$$T{motor}: \frac{T_{carga}}{i*n}$$
+$T_{load-> in} = \frac{F_{ext}}{\eta N_{RP}}$
 
-Donde:
-
-* $T{motor}$ es el torque que debe generar el motor
-* $T_{carga}$ es el torque requerido por la carga
-* $i$ es la relación de transmisión (diámetro polea conducida / diámetro polea motriz)
-* $n$ es la eficiencia del sistema (entre 0 y 1)
-
-## 5. Ejercicios
-
-### Una carga tiene una inercia de 0.05 kg·m² y se conecta a un motor a través de una relación de transmisión de 4:1.
-* Calcula la inercia reflejada al motor.
-
-$$J_{r}=\frac{J_{L}}{N^{2}}$$
-
-$J_{r}=\frac{0.05}{4^{2}}$
-
-$J_{r}=\frac{0.05}{16}$
-
-$J_{r}=0.003125 Kg*m^{2}$
-
-* Si el torque requerido por la carga es de 2 Nm, ¿cuánto torque reflejado sentirá el motor?
-
-$$T_{r}= \frac{T_{L}}{N}$$
-
-$T_{r}=\frac{2}{4}$
-
-$T_{r}=0.5 Nm$
-
-
-### Un motor eléctrico proporciona un torque constante de 3 Nm a una velocidad de 1500 rpm.
-
-* Calcular la potencia mecánica entregada por el motor en watts.
-
-$$P=T*\omega$$
-
-$T=3 Nm$
-
-$\omega = 2\pi * \frac{rpm}{60}$
-
-$\omega=2\pi* \frac{1500}{60}$
-
-$\omega=2\pi * 25$
-
-$\omega = 157.08 rad/s$
-
-$P=3*157,08$
-
-$P=471,24 W$
-
-### Un sistema de transmisión tiene una eficiencia del 85%. Si el motor entrega una potencia de 500 W:
-
-*  Calcular la potencia útil disponible en la carga.
-
-$$P_{util}=\eta*P_{entrada}$$
-
-$P_{util}=0.85*500$
-
-$P_{util}= 425 W$
+💡 Ejemplo 11:
 
 ## 6. Conclusiones
 
