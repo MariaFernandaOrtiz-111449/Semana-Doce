@@ -673,4 +673,7 @@ Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda 
 
 ## 8. Referencias
 
-*
+* Shigley, J. E., & Mischke, C. R. (2001). Diseño en Ingeniería Mecánica. McGraw-Hill.
+* Thomson Linear. (2020). Guía de tornillos de avance y actuadores lineales.
+* CEMA (Conveyor Equipment Manufacturers Association). Belt Conveyors for Bulk Materials.
+* HIWIN Technologies. Manual de sistemas de transmisión lineal por piñón-cremallera.
