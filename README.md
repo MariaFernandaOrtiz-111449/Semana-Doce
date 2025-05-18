@@ -482,7 +482,7 @@ $N_{BD} = \frac{1}{r_{ip}}$
 
 *Imagen 17. Banda Transportadora plana*
 
-Ejemplo 12:
+💡 Ejemplo 12:
 
 Datos del sistema:
 
@@ -514,8 +514,163 @@ Para mover una banda transportadora plana de 5 metros con una carga de 50 kg a u
 * Una velocidad angular de 5 rad/s
 * Un torque mínimo de 1.96 Nm en el eje de la polea motriz
 
+### 5.1. Inercia reflejada
+
+La inercia reflejada en una banda transportadora es la forma en que el motor "siente" la resistencia a poner en movimiento la banda, la carga y todo el sistema que esté conectado a ella. Se calcula para entender cuánta fuerza (torque) necesita el motor para mover todo de forma eficiente y segura.
+
+La formula general del sistema es:
+
+$J_{trans ref} = J_{IP} + J_{load-> in} + J_{carriage-> in} + J_{belt-> in} + J_{LP}$
+
+$J_{trans ref} = 2J_{P} + \frac{1}{\eta {N_{BD}}^{2}}(\frac{W_{L} + W_{c} + W_{belt}}{g})$
+
+![image](https://github.com/user-attachments/assets/29dacae2-250c-4235-8d1d-c20de5cd596d)
+
+*Imagen 18. Inercia reflejada banda transportadora*
+
+💡 Ejemplo 13:
+
+Tienes una banda transportadora impulsada por un motor a través de una polea motriz. Los datos del sistema son los siguientes:
+
+* Masa de la banda: 20 kg
+* Masa de la carga transportada: 80 kg
+* Radio de la polea motriz: 0.15 m
+* Relación de reducción (reductor entre el motor y la polea): 10:1
+
+Supón que no hay inercia en los rodamientos, poleas, etc. (para simplificar)
+
+¿Cuál es la inercia reflejada al eje del motor?
+
+**Paso 1: Calcular la inercia total en el eje de la polea**
+
+La inercia de una masa en movimiento lineal que se convierte a inercia rotacional es:
+
+$J = m⋅r^{2}$
+
+Donde:
+* m es la masa que se mueve linealmente (la banda + la carga),
+* r es el radio de la polea motriz (0.15 m)
+
+Entonces, la masa total que se mueve es:
+
+$m_{total}=20kg+80kg=100kg$
+
+Ahora la inercia equivalente en el eje de la polea:
+
+$J_{Carga} = 100⋅(0.15)^{2} =100⋅0.0225=2.25kgm^{2}$
+
+**Paso 2: Reflejar esta inercia al eje del motor**
+
+Usamos la fórmula:
+
+$J_{reflejada} = \frac{J_{carga}}{R^{2}}$
+
+donde R=10 (relación de reducción).
+
+$J_{reflejada} = \frac{2.25}{10^{2}} = 0.0225kgm^{2}$
+
+La inercia reflejada al eje del motor es $0.0225 kg·m^{2}$.
+
+### 5.2. Torque de carga
+
+El torque de carga es la fuerza que el motor debe ejercer para hacer girar la polea de la banda contra las resistencias del sistema. Depende del peso de la carga, fricción, aceleración deseada, y la geometría del sistema.
+
+La formula general del sistema es:
+
+$T_{load-> in} = \frac{F_{ext}}{\eta N_{BD}}$
+
+Además, se aplica la siguiente fórmula cuando la banda tiene un ángulo:
+
+$F_{ext} = F_{P} + (W_{L} + W_{belt})(sin\beta + \mu cos \beta)$
+
+💡 Ejemplo 14:
+
+Se tiene una banda transportadora horizontal con las siguientes características:
+
+* Longitud total de la banda: 4 m
+* Carga total sobre la banda: 200 kg
+* Masa de la banda transportadora (sin carga): 50 kg
+* Aceleración deseada: 0.4 m/s²
+* Coeficiente de fricción dinámico total (banda + rodillos): μ = 0.04
+* Radio de la polea motriz: r = 0.2 m
+* Gravedad: g = 9.81 m/s²
+
+Determinar el torque de carga necesario para mover la banda.
+
+**Paso 1: Calcular masa total del sistema**
+
+$m_{total} = m_{carga} + m_{banda} = 200 + 50 = 250 kg$
+
+**Paso 2: Calcular la fuerza de aceleración**
+
+$F_{inercia} = m_{total} \cdot a = 250 \cdot 0.4 = 100 N$
+
+**Paso 3: Calcular la fuerza de fricción**
+
+$F_{friccion} = \mu \cdot m_{total} \cdot g = 0.04 \cdot 250 \cdot 9.81 = 98.1 N$
+
+**Paso 4: Calcular la fuerza total de resistencia**
+
+$F_{resistencia} = F_{inercia} + F_{friccion} = 100 + 98.1 = 198.1 N$
+
+**Paso 5: Calcular el torque de carga**
+
+$T_{carga} = F_{resistencia} \cdot r = 198.1 \cdot 0.2 = 39.62Nm$
+
+El torque de carga necesario para mover la banda transportadora es de ≈ 39.62 Nm.
+
+### 5.3. Relación de Transmisión
+
+La relación de transmisión en una banda transportadora es la proporción entre la velocidad de giro del motor y la velocidad de giro de la polea motriz. Se expresa como:
+
+$i = \frac{n_{motor}}{n_{polea}}$
+
+* Si i>1, la polea gira más despacio que el motor y el torque aumenta.
+* Si i<1, la polea gira más rápido que el motor y el torque disminuye.
+
+Además, existen varias fórmulas las cuales relacionan la transmición con la inercia reflejada:
+
+$N_{CV} = \frac{1}{r_{DR}}$
+
+$J_{trans ref} = J_{DR} + J_{load-> in} + J_{belt-> in} + J_{ID-> in} + J_{BR-> in}$
+
+$J_{trans ref} = J_{DR} + \frac{1}{\eta {N_{CV}}^{2}}(\frac{W_{L} + W_{belt}}{g}) + \frac{J_{ID}}{\eta (\frac{r_{ID}}{r_{DR}})^{2}} + \frac{J_{BR}}{\eta (\frac{r_{ID}}{r_{DR}})^{2}}$
+
+![image](https://github.com/user-attachments/assets/73ff2c8c-eea1-441b-88e5-2c138c6d6e33)
+
+*Imagen 19. Relación de transmisión banda transportadora*
 
 
-## 7. Referencias
+💡 Ejemplo 15:
+
+* Velocidad de banda deseada: 1 m/s
+* Radio polea: 0,2 m
+
+Entonces:
+
+$n_{polea} = \frac{60 \cdot 1}{2\pi \cdot 0.2} \approx  47.7 rpm$
+
+Si el motor gira a 1500 rpm:
+
+$i = \frac{1500}{47.7} \approx 31.5$
+
+Necesitaríamos un reductor (o conjunto de poleas) con relación cercana a 32:1.
+
+Con esta relación ajustamos la velocidad y el torque para que el motor mueva la banda con la fuerza y rapidez adecuadas.
+
+## 6. Conclusiones
+
+Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda transportadora y piñón-cremallera son fundamentales en la automatización y control de movimiento en maquinaria. Cada uno presenta ventajas específicas según el tipo de aplicación:
+
+ * Polea-correa permite una transmisión flexible y económica entre ejes, con cierta tolerancia a deslizamientos.
+ * Tornillo guía ofrece alta precisión y capacidad de carga para movimientos lineales lentos.
+ * Banda transportadora es eficiente para el transporte continuo de materiales, optimizando el flujo en procesos industriales.
+ * Piñón-cremallera proporciona un movimiento lineal directo, rápido y robusto, ideal para sistemas con exigencias de fuerza y exactitud.
+
+## 7. Ejemplos
+
+
+
+## 8. Referencias
 
 *
