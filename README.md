@@ -3,9 +3,59 @@ Apuntes control de movimiento - Tercer Corte - Doceava Semana
 
 Tomás Santiago Sánchez Barrera & María Fernanda Ortíz Velandia & Andrés Felipe Arteaga Escalante
 
-# 1. Control de Movimiento (Diseño de Transmisión)
+# Indice
 
-**Conceptos de Transmisión**
+1. [Control de Movimiento (Diseño de Transmisión)](#Control-de-Movimiento(Diseño-de-Transmisión))
+
+    1.1. [Conceptos de Transmisión](#Conceptos-de-Transmisión)
+
+2. [Sistema Polea-Correa](#Sistema-Polea-Correa)
+
+    2.1. [Relación de Transmisión](#Relación-de-Transmisión)
+
+    2.2. [Inercia Reflejada](#Inercia-Reflejada)
+
+    2.3 [Torque de Carga](#Torque-de-Carga)
+
+3. [Tornillo Guía](#Tornillo-Guia)
+
+    3.1. [Tornillo Guía Acme](#Tornillo-Guia-Acme)
+
+    3.2. [Tornillo Guía de esfera](#Tornillo-guia-de-esfera)
+
+    3.3. [Relación de Transmisión](#Relacion-de-Transmision)
+
+    3.4. [Inercia Reflejada](#Inercia-Reflejada)
+
+    3.5. [Inercia Reflejada Total](#Inercia-Reflejada-Total)
+
+    3.6. [Torque de Carga](#Torque-de-Carga)
+
+4. [Piñon Cremallera](#Piñon-Cremallera)
+
+    4.1. [Relación de Transmisión](#Relacion-de-Transmision)
+
+    4.2. [Inercia Reflejada](#Inercia-Reflejada)
+
+    4.3. [Torque de Carga](#Torque-de-Carga)
+
+5. [Banda Transportadora](#Banda-Transportadora)
+
+    5.1. [Inercia Reflejada](#Inercia-Reflejada)
+
+    5.2. [Torque de carga](#Torque-de-Carga)
+
+    5.3. [Relación de Transmisión](#Relacion-de-Transmision)
+
+6. [Conclusiones](#Conclusiones)
+
+7. [Ejemplos](#Ejemplos)
+
+8. [Referencias](#Referencias)
+
+# 1. Control de Movimiento (Diseño de Transmisión) <a id="Control-de-Movimiento(Diseño-de-Transmisión)"></a>
+
+## 1.1. Conceptos de Transmisión <a id="Conceptos-de-Transmisión"></a>
 
 El diseño de transmisión mecánica es una disciplina fundamental dentro de la ingeniería, encargada de transferir potencia y movimiento entre distintos componentes de un sistema, utilizando elementos como engranajes, correas, cadenas, piñones, tornillos o bandas. Su objetivo principal es garantizar eficiencia, durabilidad y seguridad en aplicaciones como vehículos, maquinaria industrial, automatización y robótica. Un diseño adecuado no solo optimiza el rendimiento, sino que también reduce el desgaste, minimiza pérdidas de energía y mejora la eficiencia global del sistema. Para lograrlo, combina conocimientos de cinemática, dinámica y resistencia de materiales.
 
@@ -49,7 +99,7 @@ Instalar un transformador reductor en un punto intermedio o usar cables de secci
 
 *Imagen 2. Transmisión eléctrica*
 
-## 2. Sistema Polea - Correa
+## 2. Sistema Polea - Correa <a id="Sistema-Polea-Correa"></a>
 
 El sistema de transmisión polea-correa es uno de los métodos más utilizados para transferir movimiento y potencia entre ejes separados en sistemas mecánicos. Este mecanismo se basa en el uso de una o más poleas conectadas entre sí mediante una correa flexible que permite transmitir fuerza desde un eje motriz (activo) hacia uno o varios ejes conducidos (pasivos). Su popularidad se debe a su simplicidad de diseño, bajo costo, funcionamiento silencioso y capacidad de absorber vibraciones. Además, permite trabajar con distancias variables entre ejes, lo que lo hace ideal para aplicaciones en maquinaria agrícola, ventiladores, electrodomésticos y sistemas automotrices. La selección adecuada del tipo de correa (plana, trapezoidal o dentada), junto con una correcta tensión y alineación del sistema, es esencial para garantizar una transmisión eficiente, segura y duradera.
 
@@ -57,7 +107,7 @@ El sistema de transmisión polea-correa es uno de los métodos más utilizados p
 
 *Imagen 3. Sistema de Transmisión Polea-Correa*
 
-### 2.1. Relación de Transmisión
+### 2.1. Relación de Transmisión <a id="Relación-de-Transmisión"></a>
 
 La relación de transmisión en un sistema polea-correa indica cuántas veces gira una polea en comparación con otra. Es fundamental para controlar la velocidad y el par (torque) que se transmite entre los ejes. Esta relación se determina por el diámetro o número de dientes (en caso de correas dentadas) de las poleas involucradas.
 
@@ -95,7 +145,7 @@ La polea conducida gira 1 vez por cada 2 vueltas de la motora. La velocidad dism
 
 *Imagen 5. Reducción de Velocidad*
 
-### 2.2. Inercia reflejada
+### 2.2. Inercia reflejada <a id="Inercia-Reflejada"></a>
 
 La inercia reflejada (o inercia equivalente reflejada al motor) es la resistencia al cambio de movimiento angular que experimenta el motor debido a la inercia de las cargas conectadas a través de un sistema de transmisión. En otras palabras, es la forma en que la inercia de la carga se “ve” desde el lado del motor, ajustada por la relación de transmisión del sistema.
 
@@ -136,7 +186,7 @@ $$J_{r} = \frac{J_{c}}{i^{2}} = \frac{1.2}{3^{2}} = 0.133 kgm^{2}$$
 
 Desde el punto de vista del motor, la carga rotativa se siente como si tuviera una inercia de 0.133 kg·m², lo cual es mucho más fácil de mover y controlar que la inercia real de 1.2 kg·m².
 
-### 2.3. Torque de Carga
+### 2.3. Torque de Carga <a id="Torque-de-Carga"></a>
 
 El torque de carga (también llamado par de carga) es el momento de fuerza que una carga aplica en contra del movimiento generado por un motor o actuador. Es la resistencia que el sistema debe vencer para mantener el movimiento o iniciarlo.
 
@@ -170,7 +220,7 @@ $$T_{C} = Fr = 39.24 * 0.1 = 3.924 N$$
 El torque de carga necesario es 3.92 Nm.
 Este es el mínimo torque que el motor debe proporcionar (sin contar pérdidas mecánicas adicionales o inercia de arranque).
 
-## 3. Tornillo guía
+## 3. Tornillo guía <a id="Tornillo-Guia"></a>
 
 El tornillo guía, también conocido como husillo de avance o husillo de bolas (cuando tiene rodamientos internos), es un mecanismo utilizado para convertir el movimiento rotacional en movimiento lineal, con alta precisión y control.
 
@@ -205,7 +255,7 @@ Una impresora 3D tipo cartesiana utiliza un tornillo guía en el eje Z (el eje v
 * Verificar el ajuste de la tuerca, reapretar si es necesario o reemplazar si tiene juego.
 * Revisar que el tornillo no esté doblado o desalineado; si lo está, se debe reemplazar y realinear el montaje.
 
-### 3.1. Tornillo guía ACME
+### 3.1. Tornillo guía ACME <a id="Tornillo-Guia-Acme"></a>
 
 El tornillo guía ACME es un tipo de tornillo de potencia diseñado para convertir movimiento rotativo en movimiento lineal, utilizado comúnmente en maquinaria, tornos, prensas, impresoras 3D y sistemas de elevación.
 
@@ -215,7 +265,7 @@ Se caracteriza por tener una rosca trapezoidal, con un ángulo de 29° en sus fl
 
 *Imagen 9. Tornillo Guía Acme*
 
-### 3.2. Tornillo guía de esfera
+### 3.2. Tornillo guía de esfera <a id="Tornillo-guia-de-esfera"></a>
 
 El tornillo guía de esferas es un mecanismo de transmisión lineal de alta precisión que convierte el movimiento rotativo en lineal, al igual que el tornillo ACME, pero con una eficiencia mucho mayor gracias al uso de bolas recirculantes entre el tornillo y la tuerca.
 
@@ -225,7 +275,7 @@ Estas esferas giran en canales especialmente diseñados, lo que reduce drástica
 
 *Imagen 10. Tornillo guía de esferas*
  
-### 3.3. Relación de Transmisión
+### 3.3. Relación de Transmisión <a id="Relacion-de-Transmision"></a>
 
 La relación de transmisión en un tornillo guía es un concepto fundamental que describe cómo se convierte el movimiento rotacional en movimiento lineal. Esta relación indica cuánta distancia recorre linealmente una tuerca por cada vuelta completa del tornillo.
 
@@ -243,7 +293,6 @@ Supón que tienes un tornillo con un paso de 5 mm. Eso quiere decir que por cada
 Entonces:
 
 $$RT = \frac{1rev}{5mm} = 0.2 rev/mm$$
-
 
 En los sistemas de transmisión mecánica mediante tornillos guía, es importante comprender dos conceptos clave: el cabeceo (pitch) y el paso (lead). Ambos están relacionados con la conversión del movimiento rotacional en movimiento lineal, pero representan medidas distintas.
 
@@ -269,7 +318,7 @@ $\frac{\frac{\bigtriangleup \theta }{\bigtriangleup t}}{\frac{\bigtriangleup X}{
 
 *Imagen 12. Relación de Transmisión*
 
-### 3.4. Inercia Reflejada
+### 3.4. Inercia Reflejada <a id="Inercia-Reflejada"></a>
 
 Es la inercia del sistema lineal (como una carga movida por un tornillo) que se “refleja” o se transfiere al eje rotacional del motor a través del tornillo guía. Esta conversión depende directamente de la relación de transmisión del tornillo, es decir, del paso o lead del tornillo.
 
@@ -293,7 +342,7 @@ $J_{ref} = m \frac{1}{(2\pi P)^{2}}$
 
 $J_{ref} = \frac{m}{{N_{s}}^{2}}$
 
-### 3.5. Inercia Reflejada Total 
+### 3.5. Inercia Reflejada Total <a id="Inercia-Reflejada-Total"></a>
 
 En sistemas mecatrónicos donde un motor acciona una carga a través de elementos de transmisión (como tornillos guía, engranajes o correas), es fundamental analizar la inercia reflejada total. Esta representa la suma de todas las inercias que el motor “siente” en su eje, es decir, la resistencia que encuentra para acelerar o desacelerar el sistema completo.
 
@@ -305,7 +354,7 @@ $J_{trans ref} = J_{screw} + J_{load -> in} + J_{carriage -> in}$
 
 $J_{trans ref} = J_{screw} + \frac{1}{\eta {N_{s}}^{2}} (\frac{W_{L} + W_{c}}{g})$
 
-### 3.6. Torque de Carga
+### 3.6. Torque de Carga <a id="Torque-de-Carga"></a>
 
 El torque de carga (también conocido como torque resistivo) es el esfuerzo rotacional que el motor debe vencer para mover una carga en un sistema mecánico. Este torque representa todas las fuerzas que se oponen al movimiento del eje del motor debido a la presencia de masas, fricción, gravedad u otras resistencias externas.
 
@@ -337,7 +386,7 @@ $T_{load-> in} = \frac{F_{ext}}{N_{s}}$
 
 $T_{load-> in} = \frac{F_{ext}}{\eta N_{s}}$
 
-## 4. Piñon cremallera
+## 4. Piñon cremallera <a id="Piñon-Cremallera"></a>
 
 El sistema piñón-cremallera es un mecanismo de transmisión de movimiento que convierte el movimiento rotatorio de un engranaje (piñón) en movimiento lineal a través de una barra dentada recta (cremallera). Este sistema es ampliamente utilizado en aplicaciones donde se requiere un desplazamiento lineal preciso y robusto, como en sistemas de dirección de vehículos, máquinas CNC, elevadores industriales y equipos automatizados.
 
@@ -366,7 +415,7 @@ $Desplazamiento total=60⋅314.16 mm=18849.56 mm=18.85 m$
 
 $V = \frac{desplazamiento total}{tiempo} = \frac{18849.56 mm}{60 s} ≈314.16 mm/s$
 
-### 4.1. Relación de Transmisión
+### 4.1. Relación de Transmisión <a id="Relacion-de-Transmision"></a>
 
 El sistema piñón-cremallera es un mecanismo ampliamente utilizado para convertir el movimiento rotacional de un engranaje (piñón) en un movimiento lineal de una barra dentada (cremallera). A diferencia de los sistemas de transmisión entre dos engranajes circulares, donde la relación de transmisión se expresa como una razón entre radios o número de dientes, en el sistema piñón-cremallera la relación se establece entre el ángulo de rotación del piñón y la distancia lineal recorrida por la cremallera.
 
@@ -409,7 +458,7 @@ Entonces, por cada vuelta del piñón, la cremallera se moverá 251.33 mm.
 
 $Desplazamiento total=10⋅251.33 mm=2513.3 mm=2.513 m$
 
-### 4.2. Inercia Reflejada
+### 4.2. Inercia Reflejada <a id="Inercia-Reflejada"></a>
 
 En sistemas mecánicos como el piñón-cremallera, la inercia reflejada es el efecto que la masa lineal en movimiento (por ejemplo, una carga desplazándose sobre la cremallera) tiene desde el punto de vista del eje del motor que hace girar el piñón.
 
@@ -429,7 +478,7 @@ $J_{trans ref} = J_{pinion} + J_{load->in} + J_{carriage-> in}$
 
 $J_{trans ref} = J_{pinion} + \frac{1}{\eta {N_{RP}}^{2}}(\frac{W_{L} + W_{c}}{g})$
 
-### 4.3. Torque de carga
+### 4.3. Torque de carga <a id="Torque-de-Carga"></a>
 
 En un sistema piñón-cremallera, el torque de carga es el momento que el motor debe ejercer sobre el piñón para vencer una fuerza lineal (por ejemplo, una carga que se quiere mover) a través del contacto con la cremallera.
 
@@ -462,7 +511,7 @@ $T = 100 ⋅ \frac{0.06}{2} = 100 ⋅ 0.03 = 3 Nm$
 
 El motor debe generar al menos 3 Nm de torque para vencer la fuerza de carga sobre la cremallera con ese piñón. Si además hay fricción, inercia, o pendientes, ese torque deberá aumentarse.
 
-## 5. Banda Transportadora plana
+## 5. Banda Transportadora plana <a id="Banda-Transportadora"></a>
 
 Una banda transportadora plana es un sistema mecánico utilizado para transportar materiales o productos de un punto a otro de manera continua y eficiente. Está compuesta principalmente por una banda flexible (generalmente de goma, PVC o poliuretano) que se desplaza sobre una estructura plana sostenida por rodillos o una cama deslizante. La banda es impulsada por poleas motrices, y guiada por poleas conducidas y rodillos de retorno.
 
@@ -514,7 +563,7 @@ Para mover una banda transportadora plana de 5 metros con una carga de 50 kg a u
 * Una velocidad angular de 5 rad/s
 * Un torque mínimo de 1.96 Nm en el eje de la polea motriz
 
-### 5.1. Inercia reflejada
+### 5.1. Inercia reflejada <a id="Inercia-Reflejada"></a>
 
 La inercia reflejada en una banda transportadora es la forma en que el motor "siente" la resistencia a poner en movimiento la banda, la carga y todo el sistema que esté conectado a ella. Se calcula para entender cuánta fuerza (torque) necesita el motor para mover todo de forma eficiente y segura.
 
@@ -571,7 +620,7 @@ $J_{reflejada} = \frac{2.25}{10^{2}} = 0.0225kgm^{2}$
 
 La inercia reflejada al eje del motor es $0.0225 kg·m^{2}$.
 
-### 5.2. Torque de carga
+### 5.2. Torque de carga <a id="Torque-de-Carga"></a>
 
 El torque de carga es la fuerza que el motor debe ejercer para hacer girar la polea de la banda contra las resistencias del sistema. Depende del peso de la carga, fricción, aceleración deseada, y la geometría del sistema.
 
@@ -619,7 +668,7 @@ $T_{carga} = F_{resistencia} \cdot r = 198.1 \cdot 0.2 = 39.62Nm$
 
 El torque de carga necesario para mover la banda transportadora es de ≈ 39.62 Nm.
 
-### 5.3. Relación de Transmisión
+### 5.3. Relación de Transmisión <a id="Relacion-de-Transmision"></a>
 
 La relación de transmisión en una banda transportadora es la proporción entre la velocidad de giro del motor y la velocidad de giro de la polea motriz. Se expresa como:
 
@@ -658,7 +707,7 @@ Necesitaríamos un reductor (o conjunto de poleas) con relación cercana a 32:1.
 
 Con esta relación ajustamos la velocidad y el torque para que el motor mueva la banda con la fuerza y rapidez adecuadas.
 
-## 6. Conclusiones
+## 6. Conclusiones <a id="Conclusiones"></a>
 
 Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda transportadora y piñón-cremallera son fundamentales en la automatización y control de movimiento en maquinaria. Cada uno presenta ventajas específicas según el tipo de aplicación:
 
@@ -667,11 +716,11 @@ Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda 
  * Banda transportadora es eficiente para el transporte continuo de materiales, optimizando el flujo en procesos industriales.
  * Piñón-cremallera proporciona un movimiento lineal directo, rápido y robusto, ideal para sistemas con exigencias de fuerza y exactitud.
 
-## 7. Ejemplos
+## 7. Ejemplos <a id="Ejemplos"></a>
 
 
 
-## 8. Referencias
+## 8. Referencias <a id="Referencias"></a>
 
 * Shigley, J. E., & Mischke, C. R. (2001). Diseño en Ingeniería Mecánica. McGraw-Hill.
 * Thomson Linear. (2020). Guía de tornillos de avance y actuadores lineales.
