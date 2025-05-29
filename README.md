@@ -47,9 +47,9 @@ Tomás Santiago Sánchez Barrera & María Fernanda Ortíz Velandia & Andrés Fel
 
     5.3. [Relación de Transmisión](#Relacion-de-Transmision)
 
-6. [Conclusiones](#Conclusiones)
-
-7. [Ejemplos](#Ejemplos)
+6. [Ejemplos](#Ejemplos)
+   
+7. [Conclusiones](#Conclusiones)
 
 8. [Referencias](#Referencias)
 
@@ -707,7 +707,93 @@ Necesitaríamos un reductor (o conjunto de poleas) con relación cercana a 32:1.
 
 Con esta relación ajustamos la velocidad y el torque para que el motor mueva la banda con la fuerza y rapidez adecuadas.
 
-## 6. Conclusiones <a id="Conclusiones"></a>
+## 6. Ejemplos <a id="Ejemplos"></a>
+
+**Ejemplo #16**
+
+En el estudio de sistemas mecánicos, los mecanismos de transmisión por poleas representan una solución eficiente para la transferencia de movimiento y fuerza entre ejes. En este caso, se modela y analiza un sistema de poleas en el entorno de Simulink, con el fin de comprender su comportamiento dinámico y evaluar el desempeño ante distintas condiciones de operación. Esta simulación permite observar variables clave como la velocidad angular, el par transmitido y la tensión en la correa, facilitando el análisis del sistema sin la necesidad de un montaje físico. A través de esta representación virtual, se pueden realizar ajustes en los parámetros del sistema, implementar estrategias de control y validar el modelo para su posterior aplicación en sistemas reales.
+
+Para iniciar el análisis del comportamiento dinámico de un sistema de poleas, es necesario desarrollar un modelo aproximado que represente su funcionamiento. En primer lugar, se modela el sistema de generación de par aplicado al motor, el cual se conecta a una representación física que simula el movimiento del eje del motor. Posteriormente, se incorpora la polea al sistema mediante un bloque que considera los efectos del rozamiento en la transmisión, así como la interacción mecánica entre los elementos acoplados. Finalmente, la respuesta del sistema es observada a través de un osciloscopio, permitiendo analizar el comportamiento de variables como velocidad angular, par transmitido y posibles pérdidas por fricción.
+
+![Imagen de WhatsApp 2025-05-28 a las 11 27 07_83b8c1de](https://github.com/user-attachments/assets/ca6bb01e-23b3-4152-9c41-083fe0838d93)
+
+*Imagen 20. Montaje Simulacion Sistema de Poleas*
+
+Se especifican los parámetros nominales del motor utilizados para simular el movimiento, tales como la constante de par, la constante electromotriz, la inercia y la resistencia del devanado. Estos valores corresponden a configuraciones estándar, pero pueden ser modificados en función de los requerimientos físicos específicos del sistema de transmisión de potencia, permitiendo así una mayor precisión en la representación del comportamiento dinámico del modelo.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 27 42_486e7c8b](https://github.com/user-attachments/assets/beb58696-3bff-4bfc-8709-e7e2177d231b)
+
+*Imagen 21. Valores del Motor*
+
+Adicionalmente, se incorpora un bloque que simula un sensor integrado al motor, el cual permite la medición en tiempo real de variables clave del sistema, como la velocidad angular y la posición del eje. Estas señales temporales son fundamentales para la implementación y validación de estrategias de control, así como para el monitoreo del desempeño dinámico del sistema.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 36 14_422b6fe6](https://github.com/user-attachments/assets/a9978ec4-db02-4ecf-9b6a-5bfc6f7bf976)
+
+*Imagen 22. Sensor de Velocidad y Posición*
+
+Finalmente, una vez completado el diseño del modelo, incluyendo la configuración de los bloques y la asignación de los parámetros del motor, se procede a simular el sistema. La respuesta dinámica del motor se analiza mediante un osciloscopio virtual, donde se visualizan en tiempo real las variables de interés, permitiendo evaluar el comportamiento del sistema bajo las condiciones establecidas.
+
+![Imagen de WhatsApp 2025-05-28 a las 11 29 19_54b3da42](https://github.com/user-attachments/assets/5b38dcfc-025c-4ce0-9aa3-01657e03b60d)
+
+*Imagen 23. Respuesta sistema de Poleas*
+
+**Ejemplo #17**
+
+Para analizar el comportamiento de un sistema de transmisión por tornillo sin fin, es necesario desarrollar un modelo que represente con precisión sus características mecánicas y dinámicas. Este tipo de sistema es comúnmente utilizado para la reducción de velocidad y el aumento de torque, debido a su capacidad para transmitir movimiento de forma compacta y con auto-bloqueo en ciertas configuraciones.
+
+En Simulink, se implementa una representación del sistema en la que el eje del motor se acopla al tornillo sin fin, el cual transmite el movimiento rotacional a la rueda helicoidal. Se consideran elementos como la fricción, la inercia y la relación de reducción, a fin de obtener una respuesta realista del sistema. Esta simulación permite observar el comportamiento del mecanismo ante diferentes condiciones de carga y entradas de control, facilitando el diseño y validación de estrategias de control para aplicaciones de posicionamiento o transmisión de potencia.
+
+![Imagen de WhatsApp 2025-05-28 a las 12 12 39_8d055c2a](https://github.com/user-attachments/assets/696cf467-029e-4aac-8b43-a1f65e67b2ec)
+
+*Imagen 24. Montaje Tornillo Sin Fin*
+
+Se especifican los parámetros nominales del motor utilizados para simular el movimiento del sistema de tornillo sin fin, tales como la constante de par, la constante de fuerza contraelectromotriz (fem), la inercia y la resistencia del devanado. Estos valores corresponden a configuraciones estándar, pero pueden ser ajustados conforme a los requerimientos físicos específicos del sistema de transmisión, lo cual permite una representación más precisa del comportamiento dinámico del conjunto motor-tornillo sin fin.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 27 42_486e7c8b](https://github.com/user-attachments/assets/beb58696-3bff-4bfc-8709-e7e2177d231b)
+
+*Imagen 25. Valores del Motor*
+
+Adicionalmente, se incorpora un bloque que simula un sensor integrado al eje del motor, el cual permite medir en tiempo real variables clave como la velocidad angular y la posición del eje. Estas señales temporales son esenciales para la implementación de algoritmos de control y para el monitoreo del desempeño del sistema, especialmente en aplicaciones que exigen precisión en el posicionamiento o control de velocidad.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 36 14_422b6fe6](https://github.com/user-attachments/assets/a9978ec4-db02-4ecf-9b6a-5bfc6f7bf976)
+
+*Imagen 26. Sensor de Velocidad y Posición*
+
+Una vez completado el diseño del modelo, incluyendo la configuración mecánica del tornillo sin fin, el acoplamiento con el motor y la parametrización de todos los bloques involucrados, se procede a ejecutar la simulación en Simulink. La respuesta dinámica del sistema es visualizada mediante un osciloscopio virtual, el cual permite observar en tiempo real las variables de salida, facilitando el análisis del comportamiento del sistema bajo diferentes condiciones de operación y entrada.
+
+![Imagen de WhatsApp 2025-05-28 a las 12 12 19_2f600232](https://github.com/user-attachments/assets/7c7380e0-574b-4470-8c11-7908fb8336a8)
+
+*Imagen 27. Respuesta Sistema Tornillo sin Fin*
+
+**Ejemplo #18**
+
+Para analizar el comportamiento de un sistema de transmisión piñón-cremallera, es necesario desarrollar un modelo que represente con precisión sus características mecánicas y dinámicas. Este tipo de sistema se utiliza comúnmente para convertir el movimiento rotacional en traslacional, siendo ampliamente empleado en mecanismos de posicionamiento lineal, actuadores eléctricos y sistemas de dirección asistida.
+
+En Simulink, se implementa una representación del sistema en la cual el eje del motor está acoplado a un piñón que engrana con la cremallera lineal. Se consideran factores como la relación de transmisión, el rozamiento entre los elementos mecánicos, la rigidez del acoplamiento y la masa equivalente de la carga, con el fin de obtener una respuesta realista del sistema. Esta simulación permite evaluar el comportamiento dinámico ante diversas condiciones de carga y señales de control, facilitando el diseño y validación de estrategias de control para aplicaciones que requieren desplazamientos lineales precisos.
+
+![Imagen de WhatsApp 2025-05-28 a las 12 23 10_4ede8588](https://github.com/user-attachments/assets/8c9ef79d-8bac-4973-be5e-7d4c708bbdf0)
+
+*Imagen 28. Montaje Piñon Cremallera*
+
+Se especifican los parámetros nominales del motor utilizados para simular el movimiento del sistema piñón-cremallera, tales como la constante de par, la constante de fuerza contraelectromotriz (fem), la inercia del rotor y la resistencia del devanado. Estos valores corresponden a configuraciones estándar, pero pueden ser ajustados de acuerdo con los requerimientos físicos del sistema de transmisión, permitiendo así una mayor precisión en la representación del comportamiento dinámico del conjunto.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 27 42_486e7c8b](https://github.com/user-attachments/assets/beb58696-3bff-4bfc-8709-e7e2177d231b)
+
+*Imagen 29. Valores del Motor*
+
+Adicionalmente, se incorpora un bloque que simula un sensor integrado al eje del motor, el cual permite medir en tiempo real variables clave como la velocidad angular del piñón y la posición lineal de la cremallera. Estas señales temporales son esenciales para el desarrollo de algoritmos de control y para el monitoreo del desempeño del sistema, especialmente en aplicaciones donde se requiere un control fino del desplazamiento.
+
+![Imagen de WhatsApp 2025-05-28 a las 20 36 14_422b6fe6](https://github.com/user-attachments/assets/a9978ec4-db02-4ecf-9b6a-5bfc6f7bf976)
+
+*Imagen 30. Sensor de Velocidad y Posición*
+
+Una vez completado el diseño del modelo, incluyendo la configuración mecánica del sistema piñón-cremallera, el acoplamiento con el motor y la parametrización de todos los bloques involucrados, se procede a ejecutar la simulación en Simulink. La respuesta dinámica del sistema es visualizada mediante un osciloscopio virtual, lo que permite observar en tiempo real las variables de interés y analizar el comportamiento del sistema bajo distintas condiciones de operación y entrada.
+
+![Imagen de WhatsApp 2025-05-28 a las 12 23 10_deb13585](https://github.com/user-attachments/assets/95ca5ea1-36b5-420d-9305-52e7697e953e)
+
+*Imagen 31. Respuesta Sistema Piñon Cremallera*
+
+## 7. Conclusiones <a id="Conclusiones"></a>
 
 Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda transportadora y piñón-cremallera son fundamentales en la automatización y control de movimiento en maquinaria. Cada uno presenta ventajas específicas según el tipo de aplicación:
 
@@ -715,10 +801,6 @@ Los sistemas de transmisión mecánica como polea-correa, tornillo guía, banda 
  * Tornillo guía ofrece alta precisión y capacidad de carga para movimientos lineales lentos.
  * Banda transportadora es eficiente para el transporte continuo de materiales, optimizando el flujo en procesos industriales.
  * Piñón-cremallera proporciona un movimiento lineal directo, rápido y robusto, ideal para sistemas con exigencias de fuerza y exactitud.
-
-## 7. Ejemplos <a id="Ejemplos"></a>
-
-
 
 ## 8. Referencias <a id="Referencias"></a>
 
